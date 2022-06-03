@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Restaurant Reservation Form</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<form>
+  <div class="line">
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="dinername" placeholder="Enter your name here" pattern=[A-Z\sa-z]{3,50} title="Please enter only alphabets." required>
+  </div>
+  <div class="line">
+    <label for="email">Your E-mail</label>
+    <input type="email" id="email" name="dineremail" placeholder="Enter your email here" pattern={10,100} title="Please enter a valid email address" required>
+  </div>
+  <div class="line">
+    <label for="phone">Your Phone</label>
+    <input type="tel" id="phone" name="dinerphone" placeholder="Enter your phone number" pattern=(\d{4})-?\s?(\d{3})-?\s?(\d{4}) title="Please enter a valid phone number, ex. 0123-456-7891" required>
+  </div>
+  <hr>
+  <div class="line">
+    <label for="child">Number of Diners</label>
+    <input type="number" id="count" name="dinercount" placeholder="Enter number of diners" min="0" required>
+  </div>
+  <div class="line">
+    <label for="areaoption">Select Dining Area</label>
+    <select id="areaoption" name="areaoptions" required>
+        <option value="">Select Dining Area</option>
+        <option value="connecting">Outdoors</option>
+        <option value="adjoining">Indoors</option>
+    </select>
+  </div>
+  <hr>
+  <button type="submit">Reserve a Table</button>
+</form>
+</body>
+</html>
